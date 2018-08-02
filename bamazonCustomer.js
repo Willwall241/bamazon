@@ -1,7 +1,9 @@
+//Set package requirements
 var mysql = require("mysql");
 var inquirer = require("inquirer");
 var Table = require('cli-table');
 
+//Establish database connection
 var connection = mysql.createConnection({
   host: "localhost",
 
@@ -16,15 +18,19 @@ var connection = mysql.createConnection({
   database: "bamazonDB"
 });
 
+//Connect to database then call functions
 connection.connect(function (err) {
   if (err) throw err;
+
+  var tableHeading = new Table ({head:["                       Welcome To Bamazon!\n                   Database Shopping Made Easy\n         Below Are Items Currently Available For Purchase"], colWidths: [68]})
+  console.log(tableHeading.toString());
   showTable();
 
   setTimeout(buyItem, 1000)
 });
 
 
-
+//Promote user for input regarding purchase
 function buyItem() {
 
   inquirer
@@ -52,6 +58,7 @@ function buyItem() {
     });
 }
 
+//Populate database table
 function showTable() {
 
   var table = new Table({ head: ['item_id', 'product_name', 'department_name', 'price', 'stock_quantity'] })
@@ -68,13 +75,16 @@ function showTable() {
 
 }
 
+//Update item quantity
 function updateProduct(id, qty) {
 
   var query = "SELECT stock_quantity FROM products WHERE item_id =" + id;
   connection.query(query, function (err, res) {
     var item_qty = JSON.stringify(res[0].stock_quantity);
+    console.log(item_qty);
+    console.log(qty);
 
-    if (qty > item_qty) {
+    if (parseInt(qty) > parseInt(item_qty)) {
       console.log("Insufficient quantity!");
       setTimeout(buyItem, 1000)
     }
@@ -95,6 +105,7 @@ function updateProduct(id, qty) {
           // Call deleteProduct AFTER the UPDATE completes
           showTable();
           setTimeout(buyItem, 1000)
+          item_qty = 0;
         }
       );
     }
