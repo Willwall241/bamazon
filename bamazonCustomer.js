@@ -81,14 +81,15 @@ function updateProduct(id, qty) {
   var query = "SELECT stock_quantity FROM products WHERE item_id =" + id;
   connection.query(query, function (err, res) {
     var item_qty = JSON.stringify(res[0].stock_quantity);
-    console.log(item_qty);
-    console.log(qty);
+
 
     if (parseInt(qty) > parseInt(item_qty)) {
       console.log("Insufficient quantity!");
       setTimeout(buyItem, 1000)
     }
     else {
+      console.log("Your in luck we have have that item in stock!");
+      console.log("You have successfully purchased " + qty + "Units of item # " + id);
 
       connection.query(
         "UPDATE products SET ? WHERE ?",
