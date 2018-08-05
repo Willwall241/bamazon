@@ -32,15 +32,15 @@ Liri command line app
 
     1. The following will load:
 
-    ![Screenshot](media/customer1.PNG)
+  ![Screenshot](media/customer1.PNG)
 
     2. When prompted input the item_id of the item you would like to purchase and hit enter:
 
-    ![Screenshot](media/customer2.PNG)
+  ![Screenshot](media/customer2.PNG)
 
     3. Input the how many you would like to purchase and hit enter:
 
-    ![Screenshot](media/customer3.PNG)
+  ![Screenshot](media/customer3.PNG)
 
   The following table will load when completed:
 
@@ -54,24 +54,24 @@ Liri command line app
 
     1. The following will load:
 
-    ![Screenshot](media/manager1.PNG)
+  ![Screenshot](media/manager1.PNG)
 
     2. You have four options to choose from, use the arrow keys to select and item and hit enter:
 
       a. Selecting 'View Products for Sale' will load a familiar table to view what items are in stock:
 
-      ![Screenshot](media/manager2.PNG)
+  ![Screenshot](media/manager2.PNG)
 
 
       b. Selecting 'View Low Inventory' will load a table of items that have an inventory below five:
 
-      ![Screenshot](media/manager3.PNG)
+  ![Screenshot](media/manager3.PNG)
 
       c. Selecting 'Add to Inventory' will allow you to add to the inventory of a table:
 
         i. You will be prompted to input the id of the item's inventory you want to adjust. Then it will ask how many you would like to add:
 
-        ![Screenshot](media/manager4.PNG)
+  ![Screenshot](media/manager4.PNG)
 
 
       d. Selecting 'Add New Product' will allow you to add a new product to the inventory:
@@ -79,22 +79,22 @@ Liri command line app
 
       i. Input item name when you see this prompt:
 
-      ![Screenshot](media/manager5.PNG)
+  ![Screenshot](media/manager5.PNG)
 
       ii. Next prompt input the department name for the item:
 
-      ![Screenshot](media/manager6.PNG)
+  ![Screenshot](media/manager6.PNG)
 
       iii. Input the price of the item:
 
-      ![Screenshot](media/manager7.PNG)
+  ![Screenshot](media/manager7.PNG)
 
       iv. input how many are in stock:
 
-      ![Screenshot](media/manager8.PNG)
+  ![Screenshot](media/manager8.PNG)
 
       A table will load at the end showing the added item:
 
-      ![Screenshot](media/manager9.PNG)
+  ![Screenshot](media/manager9.PNG)
 
   You can now exit the application by holding now Ctrl/Cmd and hitting 'C'.
